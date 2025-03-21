@@ -56,6 +56,7 @@
     __cpp_lib_complex_udls                                  201309L [C++14]
     __cpp_lib_concepts                                      202002L [C++20]
     __cpp_lib_constexpr_algorithms                          201806L [C++20]
+                                                            202306L [C++26]
     __cpp_lib_constexpr_bitset                              202207L [C++23]
     __cpp_lib_constexpr_charconv                            202207L [C++23]
     __cpp_lib_constexpr_cmath                               202202L [C++23]
@@ -3282,17 +3283,11 @@
 #   error "__cpp_lib_atomic_flag_test should have the value 201907L in c++20"
 # endif
 
-# if !defined(_LIBCPP_VERSION)
-#   ifndef __cpp_lib_atomic_float
-#     error "__cpp_lib_atomic_float should be defined in c++20"
-#   endif
-#   if __cpp_lib_atomic_float != 201711L
-#     error "__cpp_lib_atomic_float should have the value 201711L in c++20"
-#   endif
-# else // _LIBCPP_VERSION
-#   ifdef __cpp_lib_atomic_float
-#     error "__cpp_lib_atomic_float should not be defined because it is unimplemented in libc++!"
-#   endif
+# ifndef __cpp_lib_atomic_float
+#   error "__cpp_lib_atomic_float should be defined in c++20"
+# endif
+# if __cpp_lib_atomic_float != 201711L
+#   error "__cpp_lib_atomic_float should have the value 201711L in c++20"
 # endif
 
 # ifndef __cpp_lib_atomic_is_always_lock_free
@@ -4707,17 +4702,11 @@
 #   error "__cpp_lib_atomic_flag_test should have the value 201907L in c++23"
 # endif
 
-# if !defined(_LIBCPP_VERSION)
-#   ifndef __cpp_lib_atomic_float
-#     error "__cpp_lib_atomic_float should be defined in c++23"
-#   endif
-#   if __cpp_lib_atomic_float != 201711L
-#     error "__cpp_lib_atomic_float should have the value 201711L in c++23"
-#   endif
-# else // _LIBCPP_VERSION
-#   ifdef __cpp_lib_atomic_float
-#     error "__cpp_lib_atomic_float should not be defined because it is unimplemented in libc++!"
-#   endif
+# ifndef __cpp_lib_atomic_float
+#   error "__cpp_lib_atomic_float should be defined in c++23"
+# endif
+# if __cpp_lib_atomic_float != 201711L
+#   error "__cpp_lib_atomic_float should have the value 201711L in c++23"
 # endif
 
 # ifndef __cpp_lib_atomic_is_always_lock_free
@@ -6369,17 +6358,11 @@
 #   error "__cpp_lib_atomic_flag_test should have the value 201907L in c++26"
 # endif
 
-# if !defined(_LIBCPP_VERSION)
-#   ifndef __cpp_lib_atomic_float
-#     error "__cpp_lib_atomic_float should be defined in c++26"
-#   endif
-#   if __cpp_lib_atomic_float != 201711L
-#     error "__cpp_lib_atomic_float should have the value 201711L in c++26"
-#   endif
-# else // _LIBCPP_VERSION
-#   ifdef __cpp_lib_atomic_float
-#     error "__cpp_lib_atomic_float should not be defined because it is unimplemented in libc++!"
-#   endif
+# ifndef __cpp_lib_atomic_float
+#   error "__cpp_lib_atomic_float should be defined in c++26"
+# endif
+# if __cpp_lib_atomic_float != 201711L
+#   error "__cpp_lib_atomic_float should have the value 201711L in c++26"
 # endif
 
 # ifndef __cpp_lib_atomic_is_always_lock_free
@@ -6583,8 +6566,8 @@
 # ifndef __cpp_lib_constexpr_algorithms
 #   error "__cpp_lib_constexpr_algorithms should be defined in c++26"
 # endif
-# if __cpp_lib_constexpr_algorithms != 201806L
-#   error "__cpp_lib_constexpr_algorithms should have the value 201806L in c++26"
+# if __cpp_lib_constexpr_algorithms != 202306L
+#   error "__cpp_lib_constexpr_algorithms should have the value 202306L in c++26"
 # endif
 
 # ifndef __cpp_lib_constexpr_bitset
